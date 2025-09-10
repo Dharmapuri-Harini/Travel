@@ -12,7 +12,7 @@ export default function Trips() {
 
     // Fetch trips on load
     useEffect(() => {
-        axios.get("http://localhost:5000/api/trips")
+        axios.get("https://travel-iternary-planner.vercel.app/api/trips")
             .then(res => setTrips(res.data))
             .catch(err => console.error("❌ Fetch error:", err));
     }, []);
@@ -21,7 +21,7 @@ export default function Trips() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:5000/api/trips", form);
+            const res = await axios.post("https://travel-iternary-planner.vercel.app/api/trips", form);
             setTrips([...trips, res.data]);
             setForm({ destination: "", startDate: "", endDate: "", notes: "" });
         } catch (error) {
