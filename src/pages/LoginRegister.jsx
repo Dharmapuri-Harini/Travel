@@ -44,8 +44,8 @@ const LoginRegister = () => {
 
     try {
       const endpoint = isLogin
-        ? 'http://localhost:5000/api/auth/login'
-        : 'http://localhost:5000/api/auth/register';
+        ? 'https://travel-iternary-planner.vercel.app/api/auth/login'
+        : 'https://travel-iternary-planner.vercel.app/api/auth/register';
 
       const payload = isLogin
         ? { email: form.email, password: form.password }
